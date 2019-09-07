@@ -1,0 +1,191 @@
+h1 {
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 4vw;
+    margin-top: 1em;
+    margin-bottom: 1em;
+    font-weight: bold;
+    text-align: center;
+}
+
+.flex-container {
+    display: flex;
+    justify-content: center;
+}
+
+.column {
+    width: 50vh;
+    height: 50vh;
+    margin: 1%;
+    background-color: #EEEEEE;
+    border: 0.4em solid black;
+    overflow: hidden;
+}
+
+.circle {
+    animation:
+        circle-scale 1s cubic-bezier(0.86, 0, 0.07, 1) 1 forwards,
+        circle-opacity 1s cubic-bezier(0.86, 0, 0.07, 1) 0.5s 1 forwards;
+    position: relative;
+    top: 0%;
+    left: 25%;
+    height: 70%;
+    width: 70%;
+    background: black;
+    border-radius: 50%;
+}
+
+@keyframes circle-scale {
+    0% {
+        transform: scale(0.4);
+    }
+
+    100% {
+        transform: scale(4);
+    }
+}
+
+@keyframes circle-opacity {
+    0% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+.square {
+    animation:
+        square-scale-1 1s cubic-bezier(0.86, 0, 0.07, 1) 1.5s 1 forwards,
+        square-scale-2 0.5s cubic-bezier(0.86, 0, 0.07, 1) 2.5s 1 forwards;
+    position: relative;
+    top: 15%;
+    left: 15%;
+    height: 70%;
+    width: 70%;
+    /* background: black; */
+    opacity: 0%;
+}
+
+@keyframes square-scale-1 {
+    0% {
+        transform: scale(1.7);
+        border-radius: 0px;
+        opacity: 0;
+        background: black;
+    }
+
+    100% {
+        transform: scale(1);
+        border-radius: 0px;
+        opacity: 1;
+        background: black;
+    }
+}
+
+@keyframes square-scale-2 {
+    0% {
+        transform: scale(1);
+        border-radius: 0px;
+        opacity: 1;
+        background: black;
+    }
+
+    100% {
+        transform: scale(0);
+        border-radius: 100px;
+        opacity: 0;
+        background: black;
+    }
+}
+
+.cross {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: stretch;
+    align-content: stretch;
+    height: 100%;
+}
+
+.cross1, .cross2, .cross3, .cross4, .cross5, .cross6, .cross7, .cross8, .cross9 {
+    position: relative;
+    height: 33.33%;
+    width: 33.34%;
+}
+
+.cross5 {
+    animation: cross-animation 0.4s cubic-bezier(0.86, 0, 0.07, 1) 3s 1 forwards;
+}
+
+.cross2 {
+    animation: cross-animation 0.3s cubic-bezier(0.86, 0, 0.07, 1) 3.3s 1 forwards;
+}
+
+.cross4 {
+    animation: cross-animation 0.3s cubic-bezier(0.86, 0, 0.07, 1) 3.6s 1 forwards;
+}
+
+.cross6 {
+    animation: cross-animation 0.3s cubic-bezier(0.86, 0, 0.07, 1) 3.8s 1 forwards;
+}
+
+.cross8 {
+    animation: cross-animation 0.2s cubic-bezier(0.86, 0, 0.07, 1) 4.1s 1 forwards;
+}
+
+@keyframes cross-animation {
+    0% {
+        transform: scale(0);
+        opacity: 0;
+        background-color: black
+    }
+
+    100% {
+        transform: scale(1);
+        opacity: 1;
+        background-color: black
+    }
+}
+
+
+@media screen and (max-width: 600px) {
+    .column, h1 {
+        width: 100%;
+    }
+}
+
+
+
+
+
+
+/* .vibrate {
+    animation-name: vibrate;
+    animation-duration: 0.3s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction: both;
+}
+
+@keyframes vibrate {
+    0% {
+        transform: translate(0);
+    }
+    20% {
+        transform: translate(-3px, 3px);
+    }
+    40% {
+    transform: translate(-3px, -3px);
+    }
+    60% {
+        transform: translate(3px, 3px);
+    }
+    80% {
+        transform: translate(3px, -3px);
+    }
+    100% {
+        transform: translate(0);
+    }
+} */
