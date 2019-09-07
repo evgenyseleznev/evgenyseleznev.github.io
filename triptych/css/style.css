@@ -149,43 +149,8 @@ h1 {
     }
 }
 
-
 @media screen and (max-width: 600px) {
     .column, h1 {
         width: 100%;
     }
 }
-
-
-
-
-
-
-/* .vibrate {
-    animation-name: vibrate;
-    animation-duration: 0.3s;
-    animation-timing-function: linear;
-    animation-iteration-count: infinite;
-    animation-direction: both;
-}
-
-@keyframes vibrate {
-    0% {
-        transform: translate(0);
-    }
-    20% {
-        transform: translate(-3px, 3px);
-    }
-    40% {
-    transform: translate(-3px, -3px);
-    }
-    60% {
-        transform: translate(3px, 3px);
-    }
-    80% {
-        transform: translate(3px, -3px);
-    }
-    100% {
-        transform: translate(0);
-    }
-} */
