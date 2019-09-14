@@ -21,6 +21,15 @@ let hitFilter1;
 let hitFilter2;
 let hitFilter3;
 let numberOfCounts;
+let samps = [];
+
+function preload(){
+  for(i=1;i<5;i++){
+    samps[i] = loadSound('arcade-sounds/' + [i] + '.wav');
+  }
+  console.log(samps);
+}
+
 
 function setup() {
   noCanvas();
@@ -131,18 +140,19 @@ function setup() {
   obstacles.push(obstacle1, obstacle2, obstacle3);
 
   // Displayed when obstacles are hit
-  hitFilter1 = new Box(360, 200, 100, 100, true, 0, 0);
-  hitFilter1.body.render.fillStyle = "#f4d905";
-  hitFilter1.body.render.opacity = 0;
-  hitFilter1.body.collisionFilter.group = -2;
-  hitFilter2 = new Box(180, 140, 100, 100, true, 0, 0);
-  hitFilter2.body.render.fillStyle = "#f4d905";
-  hitFilter2.body.render.opacity = 0;
-  hitFilter2.body.collisionFilter.group = -2;
-  hitFilter3 = new Box(540, 140, 100, 100, true, 0, 0);
-  hitFilter3.body.render.fillStyle = "#f4d905";
-  hitFilter3.body.render.opacity = 0;
-  hitFilter3.body.collisionFilter.group = -2;
+  hitFilter1 = new Circle(360, 210, 60,true);
+    hitFilter1.body.render.fillStyle = "#f4d905";
+    hitFilter1.body.render.opacity = 0.5;
+    hitFilter1.body.collisionFilter.group = -2;
+    hitFilter2 = new Circle(180, 140, 65, true);
+    hitFilter2.body.render.fillStyle = "#f4d905";
+    hitFilter2.body.render.opacity = 0.5;
+    hitFilter2.body.collisionFilter.group = -2;
+    hitFilter3 = new Circle(540, 140, 60, true);
+    hitFilter3.body.render.fillStyle = "#f4d905";
+    hitFilter3.body.render.opacity = 0.5;
+    hitFilter3.body.collisionFilter.group = -2;
+
 
   // ball
   ball = new Ball(760, 500, 20);
@@ -155,6 +165,7 @@ function setup() {
   Matter.Render.run(render);
 
   // collision events
+
   Matter.Events.on(engine, "collisionStart", function(event) {
     var pairs = event.pairs;
     // change colours to show those starting a collision
@@ -164,6 +175,7 @@ function setup() {
         pair.bodyA.render.opacity = 1;
         numberOfCounts++;
         updateScore();
+        samps[1].play();
       }
     }
   });
@@ -187,9 +199,9 @@ function keyPressed() {
 // workaround for making hitFilters go back to opacity 0 after hit
 function draw() {
   if (frameCount % 5 === 0) {
-    hitFilter1.body.render.opacity = 0;
-    hitFilter2.body.render.opacity = 0;
-    hitFilter3.body.render.opacity = 0;
+    hitFilter1.body.render.opacity = 0.5;
+    hitFilter2.body.render.opacity = 0.5;
+    hitFilter3.body.render.opacity = 0.5;
   }
 }
 
