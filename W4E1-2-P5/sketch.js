@@ -12,7 +12,7 @@ function draw() {
   background(27, 49, 93);
   fill(144, 216, 189);
   blendMode(DIFFERENCE);
-  //   blendMode(EXCLUSION);
+  // blendMode(EXCLUSION);
   drawCircle1();
   drawCircle2();
   drawCircle3();
