@@ -49,8 +49,8 @@ img {
   grid-template-rows: 1fr 1fr 1fr 1fr;
   grid-template-areas:
     "q2-22 q2-22 q4-21 . . view-all"
-    "q2-22 q2-22 . . q2-21 ."
-    ". q1-22 q1-22 q3-21 . ."
+    "q2-22 q2-22 . q3-20 q2-21 ."
+    ". q1-22 q1-22 q3-21 . q4-20"
     ". q1-22 q1-22 . q1-21 .";
 }
 
@@ -78,6 +78,14 @@ img {
   grid-area: q1-21;
 }
 
+#q4-20 {
+  grid-area: q4-20;
+}
+
+#q3-20 {
+  grid-area: q3-20;
+}
+
 #view-all {
   grid-area: view-all;
 }
@@ -89,7 +97,7 @@ img {
     grid-template-areas:
       "q2-22 q1-22 q4-21"
       "q3-21 q2-21 q1-21"
-      "view-all . .";
+      "q4-20 q3-20 view-all";
   }
 
   body {
