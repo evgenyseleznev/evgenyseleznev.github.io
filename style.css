@@ -29,7 +29,8 @@ a:hover {
 
 p.divider {
   text-align: center;
-  margin: 10% 0 10% 0;
+  font-size: 12vw;
+  margin: 8% 0 8% 0;
 }
 
 p.contact {
