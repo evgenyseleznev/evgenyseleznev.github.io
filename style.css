@@ -11,12 +11,14 @@ body {
   margin: 0 10% 0 10%;
   font-family: PlayfairDisplay, serif;
   font-size: 3.2vw;
+  color: #24252c;
+  background-color: #f4f4ed;
 }
 
 a,
 a:visited,
 a:active {
-  color: #585a73;
+  color: #5a5c75;
   text-decoration: none;
   cursor: url(images/cursor-pointer.png), pointer;
 }
@@ -29,11 +31,16 @@ a:hover {
 
 p.divider {
   text-align: center;
-  margin: 10% 0 10% 0;
+  margin: 9% 0 9% 0;
 }
 
 p.contact {
+  text-align: center;
   margin-bottom: 15%;
+}
+
+sup {
+  font-size: 1vw;
 }
 
 img {
@@ -45,13 +52,11 @@ img {
 
 .spotify-playlists {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
-  grid-template-rows: 1fr 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
   grid-template-areas:
-    "q2-22 q2-22 q4-21 . . view-all"
-    "q2-22 q2-22 . q3-20 q2-21 ."
-    ". q1-22 q1-22 q3-21 . q4-20"
-    ". q1-22 q1-22 . q1-21 .";
+    "q2-22 q1-22 q4-21 q3-21"
+    "q2-21 q1-21 q4-20 q3-20";
 }
 
 #q2-22 {
@@ -86,18 +91,15 @@ img {
   grid-area: q3-20;
 }
 
-#view-all {
-  grid-area: view-all;
-}
-
 @media only screen and (max-width: 550px) {
   .spotify-playlists {
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
     grid-template-areas:
-      "q2-22 q1-22 q4-21"
-      "q3-21 q2-21 q1-21"
-      "q4-20 q3-20 view-all";
+      "q2-22 q1-22"
+      "q4-21 q3-21"
+      "q2-21 q1-21"
+      "q4-20 q3-20";
   }
 
   body {
