@@ -40,7 +40,7 @@ p.contact {
 }
 
 sup {
-  font-size: 1vw;
+  font-size: 1.5vw;
 }
 
 img {
@@ -93,13 +93,12 @@ img {
 
 @media only screen and (max-width: 550px) {
   .spotify-playlists {
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
     grid-template-areas:
-      "q2-22 q1-22"
-      "q4-21 q3-21"
-      "q2-21 q1-21"
-      "q4-20 q3-20";
+      "q2-22 q1-22 q4-21"
+      "q3-21 q2-21 q1-21"
+      "q4-20 q3-20 . ";
   }
 
   body {
