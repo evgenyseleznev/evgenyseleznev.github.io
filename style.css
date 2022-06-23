@@ -1,6 +1,10 @@
 @font-face {
-  font-family: PlayfairDisplay;
-  src: url("font/PlayfairDisplay-Regular.ttf");
+  font-family: Inria;
+  src: url("font/InriaSerif-Light.ttf");
+}
+@font-face {
+  font-family: Syne;
+  src: url("font/Syne[wght].ttf");
 }
 
 :root {
@@ -9,22 +13,25 @@
 
 body {
   margin: 0 10% 0 10%;
-  font-family: PlayfairDisplay, serif;
+  font-family: Inria, serif;
   font-size: 3.2vw;
-  color: #24252c;
-  background-color: #f4f4ed;
+  color: #3e43b9;
+  background-color: #f7f7ef;
 }
 
 a,
 a:visited,
 a:active {
-  color: #5a5c75;
+  font-family: Syne, serif;
+  font-weight: 800;
+  font-size: 3.2vw;
+  color: #3e43b9;
   text-decoration: none;
   cursor: url(images/cursor-pointer.png), pointer;
 }
 
 a:hover {
-  color: #000aff;
+  color: #43b7a9;
   text-decoration: none;
   cursor: url(images/cursor-pointer.png), pointer;
 }
