@@ -46,30 +46,6 @@ p.contact {
   margin-bottom: 15%;
 }
 
-p.mail {
-  animation: rotate 3.5s infinite;
-  animation-timing-function: cubic-bezier(1, 0, 0.5, 1);
-}
-
-p.arena {
-  animation: rotate 4.5s infinite;
-  animation-timing-function: cubic-bezier(1, 0, 0.5, 1);
-}
-
-p.tumblr {
-  animation: rotate 5.5s infinite;
-  animation-timing-function: cubic-bezier(1, 0, 0.5, 1);
-}
-
-@keyframes rotate {
-  0% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(360deg);
-  }
-}
-
 sup {
   font-size: 1.5vw;
 }
@@ -122,6 +98,107 @@ img {
   grid-area: q3-20;
 }
 
+p.about1 {
+  transform-origin: top center;
+  animation: swing 1.9s ease infinite;
+}
+
+p.about2 {
+  transform-origin: top center;
+  animation: swing 2.4s ease infinite;
+}
+
+p.about3 {
+  transform-origin: top center;
+  animation: swing 2.9s ease infinite;
+}
+
+@keyframes swing {
+  20% {
+    transform: rotate(8deg);
+  }
+  40% {
+    transform: rotate(-7deg);
+  }
+  60% {
+    transform: rotate(5deg);
+  }
+  80% {
+    transform: rotate(-7deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+p.music {
+  animation: gelatine 0.7s infinite;
+}
+div.spotify-playlists,
+sup {
+  animation: gelatine 0.9s infinite;
+}
+
+@keyframes gelatine {
+  from,
+  to {
+    transform: scale(1, 1);
+  }
+  25% {
+    transform: scale(0.9, 1.1);
+  }
+  50% {
+    transform: scale(1.1, 0.9);
+  }
+  75% {
+    transform: scale(0.95, 1.05);
+  }
+}
+
+p.music-links {
+  animation: bounce 2s ease infinite;
+}
+
+@keyframes bounce {
+  0%,
+  20%,
+  50%,
+  80%,
+  100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-30px);
+  }
+  60% {
+    transform: translateY(-15px);
+  }
+}
+
+p.mail {
+  animation: rotate 3.5s infinite;
+  animation-timing-function: cubic-bezier(1, 0, 0.5, 1);
+}
+
+p.arena {
+  animation: rotate 4.5s infinite;
+  animation-timing-function: cubic-bezier(1, 0, 0.5, 1);
+}
+
+p.tumblr {
+  animation: rotate 5.5s infinite;
+  animation-timing-function: cubic-bezier(1, 0, 0.5, 1);
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
 @media only screen and (max-width: 550px) {
   .spotify-playlists {
     grid-template-columns: 1fr 1fr 1fr;
@@ -136,11 +213,12 @@ img {
     max-width: 550px;
     margin: 0 5% 0 5%;
     font-size: 25px;
+    text-align: center;
   }
 
   a,
   a:visited,
   a:active {
-    font-size: 22px;
+    font-size: 21px;
   }
 }
