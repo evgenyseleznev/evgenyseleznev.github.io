@@ -46,6 +46,30 @@ p.contact {
   margin-bottom: 15%;
 }
 
+p.mail {
+  animation: rotate 3.5s infinite;
+  animation-timing-function: cubic-bezier(1, 0, 0.5, 1);
+}
+
+p.arena {
+  animation: rotate 4.5s infinite;
+  animation-timing-function: cubic-bezier(1, 0, 0.5, 1);
+}
+
+p.tumblr {
+  animation: rotate 5.5s infinite;
+  animation-timing-function: cubic-bezier(1, 0, 0.5, 1);
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
 sup {
   font-size: 1.5vw;
 }
