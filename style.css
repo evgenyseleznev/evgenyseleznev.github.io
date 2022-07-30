@@ -4,10 +4,10 @@
 
 body {
   margin: 0 10% 0 10%;
-  font-family: "Inria Serif", serif;
-  font-size: 3.2vw;
+  font-family: "Cormorant", serif;
+  font-size: 3.5vw;
   color: #3e43b9;
-  background-color: #f7f7ef;
+  background-color: #fbfbf4;
 }
 
 a,
@@ -105,7 +105,7 @@ img {
   text-align: center;
 }
 
-p.about1 {
+/* p.about1 {
   animation: shake 4s cubic-bezier(0.76, 0, 0.24, 1) infinite;
 }
 
@@ -147,7 +147,7 @@ p.music-links {
   80% {
     transform: translateX(7px);
   }
-}
+} */
 
 p.mail {
   animation: rotate 3.5s infinite;
